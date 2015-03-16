@@ -4,11 +4,13 @@
   "description": "SVG path AST parser and stringifier",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "mocha test"
   },
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
-    "geomicons-open": "0.0.6"
+    "assert": "^1.3.0",
+    "geomicons-open": "0.0.6",
+    "mocha": "^2.2.1"
   }
 }
