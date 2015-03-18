@@ -12,6 +12,9 @@ var cameraArc = camera.commands[10].parameters;
 var chat = pathAst.parse(geomicons.chat);
 var chatCurve = chat.commands[4].parameters;
 
+// Print ASTs
+//console.log(JSON.stringify(bookmark, null, 2), JSON.stringify(camera, null, 2), JSON.stringify(chat, null, 2));
+
 var chatString = pathAst.stringify(chat);
 
 describe('path-ast', function() {
