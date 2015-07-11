@@ -4,6 +4,7 @@
   "description": "SVG path AST parser and stringifier",
   "main": "index.js",
   "scripts": {
+    "standard": "standard",
     "test": "mocha test"
   },
   "author": "Brent Jackson",
@@ -11,6 +12,13 @@
   "devDependencies": {
     "assert": "^1.3.0",
     "geomicons-open": "0.0.6",
-    "mocha": "^2.2.1"
+    "mocha": "^2.2.1",
+    "standard": "^4.5.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
   }
 }
