@@ -1,6 +1,6 @@
 {
   "name": "path-ast",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SVG path AST parser and stringifier",
   "main": "index.js",
   "scripts": {
