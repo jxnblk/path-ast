@@ -10,6 +10,9 @@ Object.keys(geomicons).forEach((key) => {
   asts[key] = parse(geomicons[key])
 })
 
+asts.test = parse('M0 16 L12 0 L30 16')
+asts.test.rotate(16, 16, 45)
+
 asts['bookmark-half'] = cloneDeep(asts.bookmark)
 asts['bookmark-half'] = asts['bookmark-half'].scale(.5)
 console.log(asts['bookmark-half'])
@@ -27,7 +30,7 @@ asts['up-rotate'] = cloneDeep(asts.triangleUp)
 //asts['up-rotate'] = asts['up-rotate'].rotate(16, 16, 0)
 
 asts['bookmark-rotate'] = cloneDeep(asts.bookmark)
-asts['bookmark-rotate'] = asts['bookmark-rotate'].rotate(16, 16, 0)
+//asts['bookmark-rotate'] = asts['bookmark-rotate'].rotate(16, 16, 0)
 
 asts['cloud-flip-x'] = cloneDeep(asts.cloud)
 asts['cloud-flip-x'] = asts['cloud-flip-x'].reflectX(16, 16)

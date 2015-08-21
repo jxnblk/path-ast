@@ -15,6 +15,7 @@ export default class App extends React.Component {
       <div style={styles.root}>
         <h1>Path AST</h1>
         <section>
+          <Icon name='test' outline />
           <Icon name='bookmark' />
           <Icon name='bookmark-half' />
           <Icon name='bookmark-double' />

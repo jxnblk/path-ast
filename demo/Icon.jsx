@@ -5,10 +5,12 @@ import icons from './icons'
 export default class Icon extends React.Component {
 
   render() {
-    const { size, name, scale } = this.props
+    const { size, name, scale, outline } = this.props
     const styles = {
       svg: {
-        fill: 'currentcolor'
+        fill: outline ? 'none' : 'currentcolor',
+        stroke: outline ? 'currentcolor' : null,
+        overflow: 'visible'
       },
       rect: {
         fill: 'none',
