@@ -17,19 +17,19 @@ export default class App extends React.Component {
         <h1>Path AST</h1>
         {/*
         <Circle />
+          <Icon name='bookmark-rotate' />
+          <Icon name='up-rotate' />
         */}
         <section>
+          <Icon name='test' />
+          <Icon name='triangleUp' />
           <Icon name='bookmark' />
-          <Icon name='bookmark-rotate' />
           <Icon name='bookmark-half' />
           <Icon name='bookmark-double' />
           <Icon name='bookmark-shifted' />
           <Icon name='home' />
           <Icon name='home-flip-y' />
-          <Icon name='triangleUp' />
-          <Icon name='up-rotate' />
           <Icon name='bookmark' />
-          <Icon name='bookmark-rotate' />
           <Icon name='cloud' />
           <Icon name='cloud-flip-x' />
           <Icon name='cloud-flip-y' />
