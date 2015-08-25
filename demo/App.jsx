@@ -1,22 +1,26 @@
 
 import React from 'react'
 import Icon from './Icon'
+import Circle from './Circle'
 
 export default class App extends React.Component {
 
   render() {
     const styles = {
       root: {
-        fontFamily: 'sans-serif'
+        fontFamily: 'sans-serif',
       }
     }
 
     return (
       <div style={styles.root}>
         <h1>Path AST</h1>
+        {/*
+        <Circle />
+        */}
         <section>
-          <Icon name='test' outline />
           <Icon name='bookmark' />
+          <Icon name='bookmark-rotate' />
           <Icon name='bookmark-half' />
           <Icon name='bookmark-double' />
           <Icon name='bookmark-shifted' />
@@ -34,6 +38,7 @@ export default class App extends React.Component {
           <Icon name='musicNote' />
           <Icon name='musicNote-flip-x' />
           <Icon name='musicNote-flip' />
+          <Icon name='test' outline />
         </section>
       </div>
     )
