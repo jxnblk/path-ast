@@ -39,7 +39,7 @@ export default class Icon extends React.Component {
     const i2 = cloneDeep(icon)
       .rotate(rotation, 16, 16)
       .scale(scale, 16, 16)
-    //.translate(translateX, translateY)
+      .translate(translateX, translateY)
     const d2 = stringify(i2)
 
     return (
