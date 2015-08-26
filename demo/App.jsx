@@ -38,7 +38,6 @@ export default class App extends React.Component {
           <Icon name='musicNote' />
           <Icon name='musicNote-flip-x' />
           <Icon name='musicNote-flip' />
-          <Icon name='test' outline />
         </section>
       </div>
     )

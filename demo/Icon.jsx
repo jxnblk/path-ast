@@ -13,8 +13,11 @@ export default class Icon extends React.Component {
         // fill: outline ? 'none' : 'currentcolor',
         // stroke: outline ? 'currentcolor' : null,
         overflow: 'visible',
-        fill: 'silver',
-        stroke: 'pink'
+        fill: 'none',
+        stroke: 'blue',
+      },
+      path: {
+        opacity: .5
       },
       guide: {
         fill: 'none',
@@ -25,12 +28,14 @@ export default class Icon extends React.Component {
       ghost: {
         fill: 'none',
         strokeWidth: .5,
-        stroke: 'red'
+        stroke: 'green',
+        opacity: .5
       }
     }
     const icon = icons[name] || ''
     const d = stringify(icon)
     const dr = stringify(cloneDeep(icon).rotate(16, 16, 0))
+    const dr2 = stringify(cloneDeep(icon).rotate(16, 16, 90))
 
     return (
       <div>
@@ -48,11 +53,13 @@ export default class Icon extends React.Component {
             'M', 0, 0, 'L', 32, 32,
             'M', 32, 0, 'L', 0, 32,
           ].join(' ')} style={styles.guide} />
-          <path d={d} />
+          <path d={d} style={styles.path} />
           <path d={dr} style={styles.ghost} />
+          <path d={dr2} style={styles.ghost} />
         </svg>
         <pre>{JSON.stringify(d, null, '  ')}</pre>
         <pre>{JSON.stringify(dr, null, '  ')}</pre>
+        <pre>{JSON.stringify(dr2, null, '  ')}</pre>
       </div>
     )
   }

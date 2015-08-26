@@ -10,7 +10,7 @@ Object.keys(geomicons).forEach((key) => {
   asts[key] = parse(geomicons[key])
 })
 
-asts.test = parse('M0 17 L16 0 L24 20')
+asts.test = parse('M0 20 L16 0 L32 20')
 // asts.test.rotate(16, 16, 0)
 
 asts['bookmark-half'] = cloneDeep(asts.bookmark)
