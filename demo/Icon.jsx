@@ -34,11 +34,11 @@ export default class Icon extends React.Component {
     }
     const icon = icons[name] || ''
     const d = stringify(icon)
-    const dr = stringify(cloneDeep(icon).rotate(0, 16, 16))
+    const dr = stringify(cloneDeep(icon).rotate(45))
     const dr2 = stringify(cloneDeep(icon).rotate(90, 16, 16))
 
     return (
-      <div>
+      <div style={{ display: 'inline-block' }}>
         <svg
           width={size * scale}
           height={size * scale}
@@ -59,9 +59,11 @@ export default class Icon extends React.Component {
           <path d={dr2} style={styles.ghost} />
           */}
         </svg>
+        {/*
         <pre>{JSON.stringify(d, null, '  ')}</pre>
         <pre>{JSON.stringify(dr, null, '  ')}</pre>
         <pre>{JSON.stringify(dr2, null, '  ')}</pre>
+        */}
       </div>
     )
   }
