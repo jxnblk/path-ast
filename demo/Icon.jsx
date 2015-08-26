@@ -13,23 +13,23 @@ export default class Icon extends React.Component {
         // fill: outline ? 'none' : 'currentcolor',
         // stroke: outline ? 'currentcolor' : null,
         overflow: 'visible',
-        fill: 'none',
-        stroke: 'blue',
+        fill: 'blue',
+        // stroke: 'blue',
       },
       path: {
-        opacity: .5
+        opacity: .25
       },
       guide: {
         fill: 'none',
         strokeWidth: .25,
         stroke: 'green',
-        opacity: .5
+        opacity: .25
       },
       ghost: {
-        fill: 'none',
-        strokeWidth: .5,
-        stroke: 'red',
-        opacity: .5
+        fill: 'red',
+        // strokeWidth: .25,
+        // stroke: 'red',
+        opacity: .25
       }
     }
     const icon = icons[name] || ''
