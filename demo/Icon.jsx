@@ -22,20 +22,20 @@ export default class Icon extends React.Component {
       guide: {
         fill: 'none',
         strokeWidth: .25,
-        stroke: 'tomato',
+        stroke: 'green',
         opacity: .5
       },
       ghost: {
         fill: 'none',
         strokeWidth: .5,
-        stroke: 'green',
+        stroke: 'red',
         opacity: .5
       }
     }
     const icon = icons[name] || ''
     const d = stringify(icon)
-    const dr = stringify(cloneDeep(icon).rotate(16, 16, 0))
-    const dr2 = stringify(cloneDeep(icon).rotate(16, 16, 90))
+    const dr = stringify(cloneDeep(icon).rotate(0, 16, 16))
+    const dr2 = stringify(cloneDeep(icon).rotate(90, 16, 16))
 
     return (
       <div>
@@ -55,7 +55,9 @@ export default class Icon extends React.Component {
           ].join(' ')} style={styles.guide} />
           <path d={d} style={styles.path} />
           <path d={dr} style={styles.ghost} />
+          {/*
           <path d={dr2} style={styles.ghost} />
+          */}
         </svg>
         <pre>{JSON.stringify(d, null, '  ')}</pre>
         <pre>{JSON.stringify(dr, null, '  ')}</pre>

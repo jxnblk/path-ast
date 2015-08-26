@@ -2,6 +2,7 @@
 import React from 'react'
 import Icon from './Icon'
 import Circle from './Circle'
+import icons from './icons'
 
 export default class App extends React.Component {
 
@@ -16,28 +17,14 @@ export default class App extends React.Component {
       <div style={styles.root}>
         <h1>Path AST</h1>
         {/*
+        <Icon name='github' />
         <Circle />
-          <Icon name='bookmark-rotate' />
-          <Icon name='up-rotate' />
+        <Icon name='bookmark-rotate' />
         */}
         <section>
-          <Icon name='test' />
-          <Icon name='triangleUp' />
-          <Icon name='bookmark' />
-          <Icon name='bookmark-half' />
-          <Icon name='bookmark-double' />
-          <Icon name='bookmark-shifted' />
-          <Icon name='home' />
-          <Icon name='home-flip-y' />
-          <Icon name='bookmark' />
-          <Icon name='cloud' />
-          <Icon name='cloud-flip-x' />
-          <Icon name='cloud-flip-y' />
-          <Icon name='heart' />
-          <Icon name='heart-flip-y' />
-          <Icon name='musicNote' />
-          <Icon name='musicNote-flip-x' />
-          <Icon name='musicNote-flip' />
+          {Object.keys(icons).map((key, i) => {
+            return <Icon key={i} name={key} />
+          })}
         </section>
       </div>
     )
