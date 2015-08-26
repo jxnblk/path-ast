@@ -10,7 +10,7 @@ export default class App extends React.Component {
     super()
     this.state = {
       rotation: 15,
-      scale: 0,
+      scale: 1,
       translateX: 0,
       translateY: 0
     }

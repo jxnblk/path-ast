@@ -36,13 +36,11 @@ export default class Icon extends React.Component {
     }
     const icon = icons[name] || ''
     const d = stringify(icon)
-    const d2 = stringify(
-      cloneDeep(icon)
-        .rotate(rotation, 16, 16)
-        .scale(scale, 16, 16)
-        .translate(translateX, translateY)
-    )
-    console.log(name, scale, rotation)
+    const i2 = cloneDeep(icon)
+      .rotate(rotation, 16, 16)
+      .scale(scale, 16, 16)
+    //.translate(translateX, translateY)
+    const d2 = stringify(i2)
 
     return (
       <div style={{ display: 'inline-block', margin: 32 }}>
