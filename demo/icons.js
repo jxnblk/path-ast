@@ -10,9 +10,12 @@ Object.keys(geomicons).forEach((key) => {
   asts[key] = parse(geomicons[key])
 })
 
-asts.test = parse('M0 20 L16 0 L32 20')
+// asts.test = parse('M0 20 L16 0 L32 20')
 // asts.test.rotate(0, 16, 16)
-asts.relative = parse('M0 20 h32 l-16 -16z')
+// asts.relative = parse('M0 20 h32 l-16 -16z')
+asts.r2 = parse('m0 16 c1 4 4 14 16 14 h14 v-28 l-16 0z')
+asts.r3 = parse('m0 16 l16 14 h14 v-28 l-16 0z')
+// asts.r4 = parse('m0 0 h28 v28 h-16 a12 12 0 0 1 -12 -12z')
 
 // asts['bookmark-half'] = cloneDeep(asts.bookmark)
 // asts['bookmark-half'] = asts['bookmark-half'].scale(.5)

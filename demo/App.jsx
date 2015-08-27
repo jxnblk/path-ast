@@ -9,7 +9,7 @@ export default class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      rotation: 15,
+      rotation: 90,
       scale: 1,
       translateX: 0,
       translateY: 0
@@ -25,16 +25,25 @@ export default class App extends React.Component {
     const styles = {
       root: {
         fontFamily: 'sans-serif',
+      },
+      header: {
+        position: 'fixed',
+        zIndex: 2,
+        backgroundColor: 'white'
+      },
+      body: {
+        paddingTop: 128
       }
     }
 
     return (
       <div style={styles.root}>
-        <h1>Path AST Demo</h1>
-        <Controls
-          {...this.state}
-          handleChange={this.handleChange} />
-        <section>
+        <div style={styles.header}>
+          <Controls
+            {...this.state}
+            handleChange={this.handleChange} />
+        </div>
+        <section style={styles.body}>
           {Object.keys(icons).map((key, i) => {
             return <Icon
               key={i}
