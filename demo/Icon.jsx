@@ -61,11 +61,6 @@ export default class Icon extends React.Component {
           ].join(' ')} style={styles.guide} />
           <path d={d} style={styles.path} />
           <path d={d2} style={styles.ghost} />
-          {/*
-          <pre>{JSON.stringify(i2, null, '  ')}</pre>
-          <pre>{JSON.stringify(d, null, '  ')}</pre>
-          <pre>{JSON.stringify(d2, null, '  ')}</pre>
-          */}
         </svg>
       </div>
     )
