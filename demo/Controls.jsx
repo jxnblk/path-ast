@@ -3,7 +3,7 @@ import React from 'react'
 
 class Input extends React.Component {
 
-  render() {
+  render () {
     const { name, label } = this.props
     const styles = {
       root: {
@@ -22,9 +22,10 @@ class Input extends React.Component {
         padding: 4,
         borderStyle: 'solid',
         borderWidth: '1px',
-        borderColor: '#bbb',
+        borderColor: '#bbb'
       }
     }
+
     return (
       <div style={styles.root}>
         <label htmlFor={name}
@@ -39,9 +40,14 @@ class Input extends React.Component {
 
 }
 
+Input.propTypes = {
+  name: React.PropTypes.string,
+  label: React.PropTypes.string
+}
+
 class Range extends React.Component {
 
-  render() {
+  render () {
     const { name, label, value } = this.props
     const styles = {
       root: {
@@ -54,9 +60,10 @@ class Range extends React.Component {
       },
       input: {
         display: 'block',
-        width: '100%',
+        width: '100%'
       }
     }
+
     return (
       <div style={styles.root}>
         <label htmlFor={name}
@@ -72,9 +79,15 @@ class Range extends React.Component {
 
 }
 
+Range.propTypes = {
+  name: React.PropTypes.string,
+  label: React.PropTypes.string,
+  value: React.PropTypes.number
+}
+
 class Col extends React.Component {
 
-  render() {
+  render () {
     const { children } = this.props
     const style = {
       display: 'inline-block',
@@ -83,6 +96,7 @@ class Col extends React.Component {
       width: 256,
       maxWidth: '100%'
     }
+
     return (
       <div style={style} children={children} />
     )
@@ -90,15 +104,19 @@ class Col extends React.Component {
 
 }
 
+Col.propTypes = {
+  children: React.PropTypes.element
+}
+
 export default class Controls extends React.Component {
 
-  render() {
+  render () {
     const {
       handleChange,
       rotation,
       scale,
       translateX,
-      translateY,
+      translateY
     } = this.props
 
     return (
@@ -122,7 +140,7 @@ export default class Controls extends React.Component {
           <Input name='scale'
             type='number'
             value={scale}
-            step={.125}
+            step={0.125}
             min={-4}
             max={4}
             onChange={handleChange} />
@@ -130,7 +148,7 @@ export default class Controls extends React.Component {
         <Col>
           <Range name='scale'
             value={scale}
-            step={.125}
+            step={0.125}
             min={-4}
             max={4}
             onChange={handleChange} />
@@ -173,5 +191,13 @@ export default class Controls extends React.Component {
     )
   }
 
+}
+
+Controls.propTypes = {
+  handleChange: React.PropTypes.func,
+  rotation: React.PropTypes.number,
+  scale: React.PropTypes.number,
+  translateX: React.PropTypes.number,
+  translateY: React.PropTypes.number
 }
 

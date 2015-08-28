@@ -1,15 +1,15 @@
 
 import React from 'react'
 import icons from './icons'
-import { clone, cloneDeep } from 'lodash'
+import { cloneDeep } from 'lodash'
 import { stringify } from '..'
 
 export default class Icon extends React.Component {
 
-  render() {
+  render () {
     const {
-      size,
       name,
+      size,
       scale,
       rotation,
       translateX,
@@ -17,21 +17,21 @@ export default class Icon extends React.Component {
     } = this.props
     const styles = {
       svg: {
-        overflow: 'visible',
+        overflow: 'visible'
       },
       path: {
-        opacity: .25,
-        fill: 'red',
+        opacity: 0.25,
+        fill: 'red'
       },
       guide: {
         fill: 'none',
-        strokeWidth: .25,
+        strokeWidth: 0.25,
         stroke: 'cyan',
-        opacity: .25
+        opacity: 0.25
       },
       ghost: {
         fill: 'blue',
-        opacity: .25
+        opacity: 0.25
       }
     }
     const icon = icons[name] || ''
@@ -57,7 +57,7 @@ export default class Icon extends React.Component {
             'M', 0, 16, 'L', 32, 16,
             'M', 16, 0, 'L', 16, 32,
             'M', 0, 0, 'L', 32, 32,
-            'M', 32, 0, 'L', 0, 32,
+            'M', 32, 0, 'L', 0, 32
           ].join(' ')} style={styles.guide} />
           <path d={d} style={styles.path} />
           <path d={d2} style={styles.ghost} />
@@ -76,10 +76,14 @@ export default class Icon extends React.Component {
 Icon.propTypes = {
   name: React.PropTypes.string,
   size: React.PropTypes.number,
+  scale: React.PropTypes.number,
+  rotation: React.PropTypes.number,
+  translateX: React.PropTypes.number,
+  translateY: React.PropTypes.number
 }
 
 Icon.defaultProps = {
   name: 'bookmark',
-  size: 32,
+  size: 32
 }
 

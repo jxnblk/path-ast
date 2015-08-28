@@ -6,7 +6,7 @@ import icons from './icons'
 
 export default class App extends React.Component {
 
-  constructor() {
+  constructor () {
     super()
     this.state = {
       rotation: 90,
@@ -17,14 +17,14 @@ export default class App extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(e) {
+  handleChange (e) {
     this.setState({ [e.target.name]: parseFloat(e.target.value) })
   }
 
-  render() {
+  render () {
     const styles = {
       root: {
-        fontFamily: 'sans-serif',
+        fontFamily: 'sans-serif'
       },
       header: {
         position: 'fixed',
@@ -45,10 +45,12 @@ export default class App extends React.Component {
         </div>
         <section style={styles.body}>
           {Object.keys(icons).map((key, i) => {
-            return <Icon
-              key={i}
-              name={key}
-              {...this.state} />
+            return (
+              <Icon
+                key={i}
+                name={key}
+                {...this.state} />
+            )
           })}
         </section>
       </div>

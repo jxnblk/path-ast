@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
 
-  entry:  [
+  entry: [
     'webpack-dev-server/client?http://localhost:8080/',
     'webpack/hot/only-dev-server',
     './demo/entry'
@@ -40,7 +40,7 @@ module.exports = {
   devServer: {
     contentBase: './demo',
     historyApiFallback: true,
-    hot: true,
+    hot: true
   }
 
 }

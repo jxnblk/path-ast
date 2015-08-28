@@ -32,7 +32,7 @@ describe('Parse and stringify', function () {
     assert.equal(f.geomicons.chat.trim(), chatString)
   })
 
-  it('should match the raw string', function() {
+  it('should match the raw string', function () {
     var raw = past.parse(f.paths.nospace).raw
     assert.equal(raw, f.paths.nospace)
   })
@@ -51,7 +51,7 @@ describe('Transform methods', function () {
 
   it('should scale a path', function (done) {
     assert.doesNotThrow(function () {
-      var scaled = f.asts.bookmark.scale(2)
+      f.asts.bookmark.scale(2)
       done()
     })
   })
@@ -59,14 +59,14 @@ describe('Transform methods', function () {
   it('should convert to absolute values', function (done) {
     assert.doesNotThrow(function () {
       var ast = past.parse(f.paths.nospace)
-      var abs = ast.toAbsolute()
+      ast.toAbsolute()
       done()
     })
   })
 
   it('should reflect x without error', function (done) {
     assert.doesNotThrow(function () {
-      var flipped = ast.reflectX(16)
+      ast.reflectX(16)
       done()
     })
   })
@@ -82,7 +82,7 @@ describe('Transform methods', function () {
   })
 
   it('should scale .5x', function () {
-    var halved = ast.scale(.5)
+    var halved = ast.scale(0.5)
     assert.equal(halved.commands[0].params.x, 8)
   })
 
