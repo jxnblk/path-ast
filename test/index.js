@@ -131,3 +131,12 @@ describe('Transform methods', function () {
 
 })
 
+describe('Expand strokes', function () {
+
+  it('should calculate angles')
+  it('should expand lines')
+  it('should expand arcs')
+  it('should expand curves')
+
+})
+
