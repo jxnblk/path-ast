@@ -104,6 +104,11 @@ describe('Transform methods', function () {
     assert.deepEqual(center, { x: 16, y: 16 })
   })
 
+  it('should calculate the bounds', function () {
+    var center = ast.getBounds()
+    assert.deepEqual(center, { minX: 0, maxX: 32, minY: 0, maxY: 32 })
+  })
+
   it('should rotate -90°', function () {
     var rotated = ast.rotate(-90)
     assert.deepEqual(
@@ -139,4 +144,3 @@ describe('Expand strokes', function () {
   it('should expand curves')
 
 })
-
